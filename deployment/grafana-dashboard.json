@@ -1,0 +1,21 @@
+{
+  "dashboard": {
+    "id": null,
+    "uid": "nginx-dashboard",
+    "title": "Nginx Monitoring",
+    "tags": ["nginx", "monitoring"],
+    "timezone": "browser",
+    "panels": [
+      {
+        "type": "graph",
+        "title": "Nginx Requests",
+        "targets": [
+          {
+            "expr": "nginx_http_requests_total{job='nginx'}",
+            "legendFormat": "{{status}}"
+          }
+        ]
+      }
+    ]
+  }
+}
